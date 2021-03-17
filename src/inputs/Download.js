@@ -16,6 +16,6 @@ export default [
   },
   {
     name: 'CMD - SMB',
-    command: 'copy \\\\{ip}\\files\\{source}\\{destination}',
+    command: 'copy \\\\{ip}\\files\\{source} {destination}',
   },
 ];
