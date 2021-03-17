@@ -14,7 +14,13 @@ const Download = ({
     .replace('{destination}', destinationFile);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(command);
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(command);
+    } else if (window?.clipboardData?.setData) {
+      window.clipboardData.setData('Text', command);
+    } else {
+      alert('Failed to copy command to clipboard');
+    }
   };
 
   return (

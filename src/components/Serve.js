@@ -4,7 +4,13 @@ const Serve = ({ serveOptions, serve, port }) => {
     .command.replace('{port}', port);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(command);
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(command);
+    } else if (window?.clipboardData?.setData) {
+      window.clipboardData.setData('Text', command);
+    } else {
+      alert('Failed to copy command to clipboard');
+    }
   };
 
   return (
