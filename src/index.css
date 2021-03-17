@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+article {
+  padding: 10px;
+  margin: 10px 0;
+  border: solid 1px red;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'ip port source destination'
+    'serveSelect serve serve serve'
+    'downloadSelect download download download';
+}
+.ip {
+  grid-area: ip;
+}
+.port {
+  grid-area: port;
+}
+.source {
+  grid-area: source;
+}
+.destination {
+  grid-area: destination;
+}
+.serveSelect {
+  grid-area: serveSelect;
+}
+.serve {
+  grid-area: serve;
+}
+.downloadSelect {
+  grid-area: downloadSelect;
+}
+.download {
+  grid-area: download;
 }
