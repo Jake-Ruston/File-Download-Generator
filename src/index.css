@@ -44,10 +44,15 @@ option {
   font-family: 'Hind Madurai', sans-serif;
 }
 
+h3:not(input) {
+  font-size: 24px;
+}
+
 p {
   margin: 10px;
   padding: 10px;
   border: solid 1px var(--red);
+  font-size: 20px;
 }
 
 a {
@@ -61,7 +66,7 @@ footer {
 }
 
 main {
-  width: 70%;
+  width: 80%;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
@@ -118,6 +123,7 @@ article:nth-child(8) {
 input {
   background: var(--blue);
   color: var(--white);
+  font-size: 18px;
   text-align: center;
   padding: 5px;
   border: none;
