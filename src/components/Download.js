@@ -13,8 +13,12 @@ const Download = ({
     .replace('{source}', sourceFile)
     .replace('{destination}', destinationFile);
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(command);
+  };
+
   return (
-    <article class='download'>
+    <article class='wide' onClick={copyToClipboard}>
       <h3>Download the files</h3>
       <p>{command}</p>
     </article>

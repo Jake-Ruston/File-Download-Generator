@@ -12,6 +12,7 @@ import ServeSelect from './components/ServeSelect';
 import Serve from './components/Serve';
 import DownloadSelect from './components/DownloadSelect';
 import Download from './components/Download';
+import Footer from './components/Footer';
 
 const App = () => {
   const [ip, setIp] = useState('192.168.1.1');
@@ -24,38 +25,41 @@ const App = () => {
   return (
     <>
       <Header />
-      <>
-        <IPAddress ip={ip} setIp={setIp} />
-        <Port port={port} setPort={setPort} />
-        <SourceFile sourceFile={sourceFile} setSourceFile={setSourceFile} />
-        <DestinationFile
-          destinationFile={destinationFile}
-          setDestinationFile={setDestinationFile}
-        />
-      </>
-      <>
-        <ServeSelect
-          serveOptions={serveOptions}
-          serve={serve}
-          setServe={setServe}
-        />
-        <Serve serveOptions={serveOptions} serve={serve} port={port} />
-      </>
-      <>
-        <DownloadSelect
-          downloadOptions={downloadOptions}
-          download={download}
-          setDownload={setDownload}
-        />
-        <Download
-          downloadOptions={downloadOptions}
-          download={download}
-          ip={ip}
-          port={port}
-          sourceFile={sourceFile}
-          destinationFile={destinationFile}
-        />
-      </>
+      <main>
+        <>
+          <IPAddress ip={ip} setIp={setIp} />
+          <Port port={port} setPort={setPort} />
+          <SourceFile sourceFile={sourceFile} setSourceFile={setSourceFile} />
+          <DestinationFile
+            destinationFile={destinationFile}
+            setDestinationFile={setDestinationFile}
+          />
+        </>
+        <>
+          <ServeSelect
+            serveOptions={serveOptions}
+            serve={serve}
+            setServe={setServe}
+          />
+          <Serve serveOptions={serveOptions} serve={serve} port={port} />
+        </>
+        <>
+          <DownloadSelect
+            downloadOptions={downloadOptions}
+            download={download}
+            setDownload={setDownload}
+          />
+          <Download
+            downloadOptions={downloadOptions}
+            download={download}
+            ip={ip}
+            port={port}
+            sourceFile={sourceFile}
+            destinationFile={destinationFile}
+          />
+        </>
+      </main>
+      <Footer />
     </>
   );
 };

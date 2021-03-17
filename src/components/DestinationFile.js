@@ -2,7 +2,7 @@ const DestinationFile = ({ destinationFile, setDestinationFile }) => {
   const update = (event) => setDestinationFile(event.target.value);
 
   return (
-    <article class='destination'>
+    <article>
       <h3>Destination File</h3>
       <input type='text' value={destinationFile} onChange={update} />
     </article>

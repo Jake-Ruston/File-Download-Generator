@@ -3,8 +3,12 @@ const Serve = ({ serveOptions, serve, port }) => {
     .find(({ name }) => name === serve)
     .command.replace('{port}', port);
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(command);
+  };
+
   return (
-    <article class='serve'>
+    <article class='wide' onClick={copyToClipboard}>
       <h3>Serve the files</h3>
       <p>{command}</p>
     </article>
