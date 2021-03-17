@@ -1,3 +1,5 @@
+import CopyIcon from '../icons/copy.svg';
+
 const Download = ({
   downloadOptions,
   download,
@@ -27,6 +29,7 @@ const Download = ({
     <article class='wide' onClick={copyToClipboard}>
       <h3>Download the files</h3>
       <p>{command}</p>
+      <img src={CopyIcon} />
     </article>
   );
 };

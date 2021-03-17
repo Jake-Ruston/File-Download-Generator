@@ -1,3 +1,5 @@
+import CopyIcon from '../icons/copy.svg';
+
 const Serve = ({ serveOptions, serve, port }) => {
   const command = serveOptions
     .find(({ name }) => name === serve)
@@ -17,6 +19,7 @@ const Serve = ({ serveOptions, serve, port }) => {
     <article class='wide' onClick={copyToClipboard}>
       <h3>Serve the files</h3>
       <p>{command}</p>
+      <img src={CopyIcon} />
     </article>
   );
 };
