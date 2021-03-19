@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Hind+Madurai:wght@300&family=Montserrat+Alternates:ital,wght@1,200&display=swap');
 
 :root {
-  --blue: #05122c;
-  --red: #e51e2d;
+  --primary: #212440;
+  --secondary: #272947;
   --white: #ffffff;
 }
 
@@ -19,7 +19,7 @@ input::-webkit-inner-spin-button {
 }
 
 body {
-  background: var(--blue);
+  background: var(--primary);
   color: var(--white);
   text-align: center;
 }
@@ -50,9 +50,9 @@ h3:not(input) {
 
 p {
   margin: 10px;
-  padding: 10px;
-  border: solid 1px var(--red);
+  padding: 20px;
   font-size: 20px;
+  background: var(--primary);
 }
 
 a {
@@ -83,7 +83,7 @@ article {
   justify-content: center;
   align-items: center;
   height: 240px;
-  border: solid 3px var(--red);
+  background: var(--secondary);
 }
 
 article:nth-child(1) {
@@ -121,7 +121,7 @@ article:nth-child(8) {
 }
 
 input {
-  background: var(--blue);
+  background: var(--secondary);
   color: var(--white);
   font-size: 18px;
   text-align: center;
